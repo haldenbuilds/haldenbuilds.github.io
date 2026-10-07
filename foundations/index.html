@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Foundations Kit + motion graphics guide · HaldenBuilds</title>
+<meta name="description" content="The kit Claude reads before it works on your business, and the exact prompts behind three Claude films. Both on one page.">
+<meta name="theme-color" content="#161412">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Foundations Kit + motion graphics guide">
+<meta property="og:description" content="The kit Claude reads before it works on your business, and the exact prompts behind three Claude films. Both on one page.">
+<meta property="og:url" content="https://haldenbuilds.github.io/foundations/">
+<meta property="og:image" content="https://haldenbuilds.github.io/foundations/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://haldenbuilds.github.io/foundations/">
+<style>
+@font-face { font-family: "Unbounded"; src: url("fonts/Unbounded-wght.ttf") format("truetype"); font-weight: 200 900; font-display: swap; }
+@font-face { font-family: "Plus Jakarta Sans"; src: url("fonts/PlusJakartaSans-wght.ttf") format("truetype"); font-weight: 200 800; font-display: swap; }
+:root {
+  --bg: #161412;
+  --surface: #201D1A;
+  --surface-raised: #2A2622;
+  --line: #302B27;
+  --ink: #ECECEC;
+  --ink-muted: #A8A29A;
+  --accent: #F34232;
+  --accent-2: #FFB09E;
+  --on-accent: #0D0D0D;
+  --accent-3: #0A8DFF;
+  --display: "Unbounded";
+  --text: "Plus Jakarta Sans";
+}
+* { box-sizing: border-box; }
+html { background: var(--bg); }
+body { margin: 0; background: var(--bg); color: var(--ink); font-family: var(--text); font-weight: 500; font-size: 16px; line-height: 1.55; -webkit-text-size-adjust: 100%; }
+.hero { background-color: var(--bg); background-image: url("img/lattice.svg"); background-size: cover; background-position: center top; padding: 20px 20px 36px; }
+.wrap { max-width: 980px; margin: 0 auto; }
+.who { display: flex; align-items: center; gap: 10px; color: var(--ink-muted); font-weight: 600; font-size: 15px; }
+.who img { width: 40px; height: 40px; border-radius: 50%; display: block; }
+.eyebrow { margin: 44px 0 14px; color: var(--accent-2); font-weight: 700; font-size: 14px; letter-spacing: .08em; text-transform: uppercase; }
+h1 { font-family: var(--display); font-weight: 800; font-size: clamp(30px, 8.4vw, 64px); line-height: 1.04; letter-spacing: -0.01em; margin: 0; max-width: 15ch; }
+.a3 { color: var(--accent-3); }
+.lead { margin: 20px 0 0; max-width: 40ch; font-size: 18px; color: var(--ink); }
+main { padding: 8px 20px 0; }
+.grid { display: grid; gap: 18px; }
+.plate { background: var(--surface); border: 1px solid var(--line); border-radius: 28px; padding: 24px 22px 26px; }
+.chip { display: inline-block; background: var(--surface-raised); color: var(--accent-2); border-radius: 14px; padding: 6px 12px; font-weight: 700; font-size: 13px; letter-spacing: .08em; text-transform: uppercase; }
+h2 { font-family: var(--display); font-weight: 700; font-size: 26px; line-height: 1.1; margin: 16px 0 6px; }
+.facts { font-family: var(--display); font-weight: 700; font-size: 19px; color: var(--accent); margin: 0 0 12px; }
+.gtitle { font-family: var(--display); font-weight: 700; font-size: 19px; color: var(--accent); margin: 0 0 12px; }
+.body { margin: 0 0 18px; }
+h3 { font-size: 15px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; color: var(--ink-muted); margin: 0 0 10px; }
+ol { margin: 0 0 14px; padding-left: 22px; }
+ol li { margin: 0 0 6px; }
+ol li::marker { color: var(--accent-2); font-weight: 700; }
+.paste { background: var(--bg); border: 1px solid var(--line); border-radius: 14px; padding: 14px 16px; margin: 0 0 10px; font-weight: 600; font-size: 15px; line-height: 1.45; color: var(--ink); user-select: all; -webkit-user-select: all; overflow-wrap: anywhere; }
+.copy { font: inherit; font-weight: 700; font-size: 14px; color: var(--ink); background: var(--surface-raised); border: 1px solid var(--line); border-radius: 14px; padding: 9px 14px; cursor: pointer; }
+.note { color: var(--ink-muted); font-size: 15px; margin: 14px 0 18px; }
+.btn { display: block; text-align: center; background: var(--accent); color: var(--on-accent); font-weight: 800; font-size: 17px; text-decoration: none; border-radius: 14px; padding: 16px 18px; min-height: 52px; }
+.more { display: inline-block; margin-top: 14px; color: var(--ink); font-weight: 600; font-size: 15px; text-underline-offset: 3px; }
+.cover { display: block; width: 100%; height: auto; aspect-ratio: 1600 / 1000; border-radius: 14px; border: 1px solid var(--line); margin: 0 0 16px; }
+.gfacts { color: var(--ink-muted); font-weight: 600; font-size: 15px; margin: 0 0 16px; }
+footer { padding: 36px 20px 48px; color: var(--ink-muted); font-size: 14px; text-align: center; }
+@media (min-width: 880px) {
+  .hero { padding: 28px 40px 56px; }
+  main { padding: 8px 40px 0; }
+  .grid { grid-template-columns: 1fr 1fr; align-items: start; }
+  .eyebrow { margin-top: 64px; }
+  .plate { padding: 30px 30px 32px; }
+}
+</style>
+</head>
+<body>
+<header class="hero"><div class="wrap">
+  <div class="who"><img src="img/haldenbuilds.png" alt="" width="40" height="40"><span>@haldenbuilds</span></div>
+  <p class="eyebrow">Two pieces, delivered together</p>
+  <h1>Your <span class="a3">Foundations</span> Kit and the motion graphics guide</h1>
+  <p class="lead">The kit puts your business in files Claude reads before it starts. The guide gives you the exact prompts behind three Claude films, and how to point one at your brand.</p>
+</div></header>
+<main><div class="wrap grid">
+  <section class="plate" id="kit">
+    <span class="chip">01 · The kit</span>
+    <h2>Foundations Kit</h2>
+    <p class="facts">48 parts · 81 files · one line to start</p>
+    <p class="body">Your offer, pricing, weekly numbers, memory and backup, as files Claude reads first. It opens with The Operator Check: ten questions from your own records, about five minutes, then a plan for your next four weeks.</p>
+    <h3>How to start</h3>
+    <ol>
+      <li>Download the zip and unzip it.</li>
+      <li>Give the folder to Claude, or the AI agent you use.</li>
+      <li>Paste this one line:</li>
+    </ol>
+    <p class="paste" id="paste-line">Read KIT-MANIFEST.md in this folder and follow its notice to the recipient&#x27;s agent.</p>
+    <button class="copy" type="button" id="copy-btn" data-done="Copied">Copy the line</button>
+    <p class="note">Your agent needs to read and write files in that folder and run a command. The kit has it check that first.</p>
+    <a class="btn" href="https://github.com/haldenbuilds/foundations-kit/releases/latest/download/foundations-kit.zip">Download the kit (.zip)</a>
+    <a class="more" href="https://github.com/haldenbuilds/foundations-kit">See every file on GitHub</a>
+  </section>
+  <section class="plate" id="guide">
+    <span class="chip">02 · The guide</span>
+    <h2>Motion graphics guide</h2>
+    <p class="gtitle">One prompt. Three films.</p>
+    <p class="body">The exact prompts behind three Claude films, word for word, typos and all. Then how to point one at your own brand: your colors, fonts, logo and the lines you already say.</p>
+    <img class="cover" src="img/guide-cover.jpg" alt="The first screen of the motion graphics guide" width="1600" height="1000">
+    <p class="gfacts">7 screens · PDF, or one web page</p>
+    <a class="btn" href="motion-guide.pdf">Open the guide (PDF)</a>
+    <a class="more" href="motion-guide.html">Read it as a web page</a>
+  </section>
+</div></main>
+<footer>HaldenBuilds. Building leverage, the right way.</footer>
+<script>
+(function () {
+  var b = document.getElementById("copy-btn"), p = document.getElementById("paste-line");
+  if (!b || !p) return;
+  var label = b.textContent;
+  b.addEventListener("click", function () {
+    var line = p.textContent, done = function () { b.textContent = b.getAttribute("data-done"); setTimeout(function () { b.textContent = label; }, 1800); };
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(line).then(done, function () { window.getSelection().selectAllChildren(p); });
+    } else {
+      window.getSelection().selectAllChildren(p);
+    }
+  });
+})();
+</script>
+</body>
+</html>
