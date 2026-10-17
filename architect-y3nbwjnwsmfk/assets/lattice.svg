@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350"
+     shape-rendering="crispEdges" aria-hidden="true" class="ground">
+<desc>G-2 lattice at density 1.0. Material set: this brand's dark ramp only. The ground is the agent's unresolved understanding.</desc>
+<defs>
+  <filter id="gu21" x="0" y="0" width="100%" height="100%" color-interpolation-filters="sRGB">
+    <feTurbulence type="fractalNoise" baseFrequency="0.95" numOctaves="3" seed="21" result="n"/>
+    <feColorMatrix in="n" type="matrix" values="0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  .3333 .3333 .3333 0 0" result="m"/>
+    <feComponentTransfer in="m"><feFuncA type="linear" slope="2" intercept="-1"/></feComponentTransfer>
+  </filter>
+  <filter id="gd21" x="0" y="0" width="100%" height="100%" color-interpolation-filters="sRGB">
+    <feTurbulence type="fractalNoise" baseFrequency="0.95" numOctaves="3" seed="22" result="n"/>
+    <feColorMatrix in="n" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  .3333 .3333 .3333 0 0" result="m"/>
+    <feComponentTransfer in="m"><feFuncA type="linear" slope="-2" intercept="1"/></feComponentTransfer>
+  </filter>
+  <filter id="dissolve" x="0" y="0" width="100%" height="100%" color-interpolation-filters="sRGB">
+    <feTurbulence type="fractalNoise" baseFrequency="0.0035" numOctaves="3" seed="2" result="n"/>
+    <feColorMatrix in="n" type="matrix" values="0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  .3333 .3333 .3333 0 0"/>
+    <feComponentTransfer><feFuncA type="linear" slope="1.7" intercept="-0.45"/></feComponentTransfer>
+  </filter>
+  <mask id="mdissolve"><rect width="1080" height="1350" filter="url(#dissolve)"/></mask>
+  <pattern id="grid" width="45" height="45" patternUnits="userSpaceOnUse">
+    <rect width="45" height="1" fill="#302B27"/>
+    <rect width="1" height="45" fill="#302B27"/>
+  </pattern></defs>
+<rect width="1080" height="1350" fill="#161412"/>
+<rect width="1080" height="1350" fill="url(#grid)" mask="url(#mdissolve)" opacity="0.85"/><rect width="1080" height="1350" filter="url(#gu21)" opacity="0.07"/><rect width="1080" height="1350" filter="url(#gd21)" opacity="0.07"/>
+</svg>
